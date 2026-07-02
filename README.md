@@ -116,6 +116,7 @@ linux/arm64
 * `ANONADDY_NEW_ALIAS_LIMIT`: Number of new aliases a user can create each hour (default `10`)
 * `ANONADDY_ADDITIONAL_USERNAME_LIMIT`: Number of additional usernames a user can add to their account (default `10`)
 * `ANONADDY_SIGNING_KEY_FINGERPRINT`: GPG key used to sign forwarded emails. Should be the same as your mail from email address
+* `ANONADDY_GNUPGHOME`: Directory containing the mailer signing key for OpenPGP encryption (default `/data/.gnupg`)
 * `ANONADDY_DKIM_SIGNING_KEY`: Path to the private DKIM signing key to be used to sign emails for custom domains.
 * `ANONADDY_DKIM_SELECTOR`: Selector for the current DKIM signing key (default `default`)
 

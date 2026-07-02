@@ -28,13 +28,13 @@ if [ ! -L /var/www/anonaddy/storage ]; then
 fi
 chown -h anonaddy:anonaddy /var/www/anonaddy/storage
 chown -R anonaddy:anonaddy /data/storage
-mkdir -p /data/.gnupg
+mkdir -p ${ANONADDY_GNUPGHOME}
 if [ ! -L /var/www/anonaddy/.gnupg ]; then
-  ln -sf /data/.gnupg /var/www/anonaddy/.gnupg
+  ln -sf ${ANONADDY_GNUPGHOME} /var/www/anonaddy/.gnupg
 fi
 chown -h anonaddy:anonaddy /var/www/anonaddy/.gnupg
-chown -R anonaddy:anonaddy /data/.gnupg
-chmod 700 /data/.gnupg
+chown -R anonaddy:anonaddy ${ANONADDY_GNUPGHOME}
+chmod 700 ${ANONADDY_GNUPGHOME}
 
 echo "Checking database connection..."
 if [ -z "$DB_HOST" ]; then
